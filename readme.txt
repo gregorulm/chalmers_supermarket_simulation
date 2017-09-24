@@ -14,10 +14,10 @@ The high-level view is as follows: the store is open from 7:00 to 21:59. For
 every minute of every hour in that interval, there is a set probability that a
 new customer will enter the supermarket. A visit to the supermarket has at most
 three phases: pre-fridge, fridge, and post-fridge. Some customers don't go to
-the fridge. The duration of each phase is random. At the end of the sequence
-just described, the visitor moves on to one of the checkout registers. Well, in
-reality, the script runs ten sequential simulations, one for each checkout
-register, but that does not affect the outcome in a meaningful way.
+the fridge, though. The duration of each phase is random. At the end of the
+sequence just described, the visitor moves on to one of the checkout registers.
+Well, in reality, the script runs ten sequential simulations, one for each
+checkout register, but that does not affect the outcome in a meaningful way.
 
 More formally, at the center of the simulation is a simple Markov process with
 the states "start", "fridge", and "cashier". From "start", a customer can
@@ -29,8 +29,10 @@ timestamp for each encountered customer. By collating those files, it can
 be determined how many customers left the store in each 10-minute interval.
 Thus, this simulation models high-level shopping behavior. The result was
 used for further explorations, for instance predicting customer numbers
-based on how many customers left the supermarket in the preceeding 10-minute
-intervals.
+based on how many customers left the supermarket in the preceding 10-minute
+interval.
+
+The files in /sim_fridge also model energy consumption.
 
 
 Execution order:
